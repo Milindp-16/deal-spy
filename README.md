@@ -1,6 +1,6 @@
 # DealSPY
 
-An AI-powered e-commerce product-scraping platform that automatically pulls product details from Amazon, tracks price and stock changes, and sends alert emails to subscribed users.
+An AI-powered e-commerce product-scraping platform that automatically pulls product details from Amazon, tracks price and sends alert emails to subscribed users.
 
 ---
 
@@ -34,19 +34,17 @@ An AI-powered e-commerce product-scraping platform that automatically pulls prod
 - **Modular Code Architecture**  
   Clean service-controller-router pattern with reusable utilities and middlewares.
 
+---
 
-Setting Up Environment Variables
+##  Setting Up Environment Variables
 
 Create a new file named .env in the root of your project and add the following content:
 
-#SCRAPER
 BRIGHT_DATA_USERNAME=
 BRIGHT_DATA_PASSWORD=
 
-#DB
 MONGODB_URI=
 
-#OUTLOOK
 EMAIL_USER=
 EMAIL_PASS=
 
