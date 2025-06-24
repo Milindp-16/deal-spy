@@ -40,10 +40,14 @@ An AI-powered e-commerce product-scraping platform that automatically pulls prod
 
 Create a new file named .env in the root of your project and add the following content:
 
--BRIGHT_DATA_USERNAME=
--BRIGHT_DATA_PASSWORD=
--MONGODB_URI=
--EMAIL_USER=
--EMAIL_PASS=
+BRIGHT_DATA_USERNAME=
+
+BRIGHT_DATA_PASSWORD=
+
+MONGODB_URI=
+
+EMAIL_USER=
+
+EMAIL_PASS=
 
 Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on these specific websites from BrightData, MongoDB, and Node Mailer
