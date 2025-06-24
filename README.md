@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DealSPY
 
-## Getting Started
+An AI-powered e-commerce product-scraping platform that automatically pulls product details from Amazon, tracks price and stock changes, and sends alert emails to subscribed users.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ⚙️ Tech Stack
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Frontend**: Next.js, Tailwind CSS, Headless UI  
+- **Scraping**: Bright Data (formerly Luminati), Cheerio  
+- **Backend**: Node.js, Express.js  
+- **Database**: MongoDB  
+- **Email**: Nodemailer  
+- **Task Scheduling**: Node Cron
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔋 Features
 
-## Learn More
+- **Header with Carousel**  
+  Visually appealing hero section showcasing key benefits.  
+- **Product Scraping**  
+  Users paste an Amazon product URL into a search bar to begin scraping.  
+- **Scraped Products Dashboard**  
+  Displays a list of all scraped items with thumbnail, title, price, and more.  
+- **Product Details View**  
+  Detailed view of each item: image, title, current price, description, and metadata.  
+- **Track Option**  
+  Modal where users enter their email to subscribe to price and stock alerts.  
+- **Email Notifications**  
+  Automated alerts for back-in-stock or lowest-price triggers.  
+- **Automated Cron Jobs**  
+  Scheduled scraping tasks to keep product data fresh (e.g. every hour).  
+- **Modular Code Architecture**  
+  Clean service-controller-router pattern with reusable utilities and middlewares.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Setting Up Environment Variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Create a new file named .env in the root of your project and add the following content:
 
-## Deploy on Vercel
+#SCRAPER
+BRIGHT_DATA_USERNAME=
+BRIGHT_DATA_PASSWORD=
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#DB
+MONGODB_URI=
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#OUTLOOK
+EMAIL_USER=
+EMAIL_PASS=
+
+Replace the placeholder values with your actual credentials. You can obtain these credentials by signing up on these specific websites from BrightData, MongoDB, and Node Mailer
